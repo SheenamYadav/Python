@@ -1,0 +1,22 @@
+lst1 = [1,2,3,[4,5],6]
+lst2 = []
+def flatenList(i):
+    '''
+    objective: to flaten a given list
+    input parameters: lst1 is the list to be copied and flatened 
+                      lst2 is the second list to store the flatened list
+    '''
+    #approach: Recursive Approach
+    assert i<len(lst1)
+    print("List1 : ", lst1)
+    #lst2 = list(lst1)
+
+    if (type(lst1[i]) is int):
+        lst2.append(lst1[i])
+        print ("List2 : ", lst2)
+    elif (type(lst1[i]) is list):
+        lst2.extend(lst1[i])
+        print ("List2 : ", lst2)
+    flatenList(i+1)
+    
+flatenList(0)
