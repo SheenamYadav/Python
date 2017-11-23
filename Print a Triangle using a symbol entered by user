@@ -1,0 +1,27 @@
+def areaTriangle(base,height):
+    '''
+    objective: to find area of triangle
+    input var: base of triangle
+               height of triangle
+    approach: to multiply base and height and divide result by 2
+    return value: area of triangle
+    '''
+    area = (base*height)/2
+    return area
+
+def main():
+    '''
+    objective: to find area of triangle
+    input var: base of triangle
+               height of triangle
+    approach: using function areaTriangle
+    return value: area of triangle
+    '''
+    base=int(input('enter base'))
+    height=int(input('enter height'))
+    print('area of triangle',areaTriangle(base,height))
+    print ('end of output')
+    
+if __name__=='__main__':
+    main()
+    print('end of prog')
