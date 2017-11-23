@@ -1,0 +1,35 @@
+def areaRectangle(length,breadth):
+    '''
+    objective: to compute the area of rectangle
+    input parameters: 
+                length of rectangle
+                breadth of rectangle
+    approach: multiply length and breadth
+    return value: area of rectangle
+    '''
+    area = length*breadth
+    return area
+    
+def main(): 
+    '''
+    objective: to compute the area of rectangle
+    input parameters: 
+                length of rectangle
+                breadth of rectangle
+    approach: multiply length and breadth
+    return value: area of rectangle
+    '''
+    length = int(input('enter the length  '))
+    breadth = int(input('enter the breadth  '))
+    print('id(length)',id(length))
+    print('id(breadth)',id(breadth))
+    print('id(area)',id(areaRectangle))
+    print('areaRectangle',areaRectangle)
+    print('length',length)
+    print('breadth',breadth)
+    print('area is',areaRectangle(length,breadth))
+    print('end of output')
+    
+if __name__=='__main__':
+    main()
+    print('end of prog')
