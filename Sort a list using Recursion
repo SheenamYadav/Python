@@ -1,0 +1,26 @@
+def insert_in_sorted_lst(lst,ele,i=0):
+    '''
+    objective-to insert a element in a sorted list
+    input parameters-
+                    lst-a sorted list
+                    ele-element to be inserted in sorted list
+    return value-none
+    '''
+    #approach-using recursion
+    size=len(lst)
+    if(i==size):
+        lst.append(ele)
+    elif(ele<lst[i]):
+        lst.insert(i,ele)       #insert at i th position the element ele
+    else:
+        insert_in_sorted_lst(lst,ele,i+1)
+
+lst = [2,3,4,6]
+ele = 5
+print("Element to be inserted is: ")
+print(ele)
+print("List before inserting the element is : ")
+print(lst)
+insert_in_sorted_lst(lst,ele)    
+print("List after inserting the element is : ")
+print(lst)
