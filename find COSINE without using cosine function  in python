@@ -1,0 +1,37 @@
+def cos(x):
+    '''
+    objective: to find the value of cos of a given number.
+    input parameters:
+                     x the value for which cos is to be calculated
+    return value: the value of cos of x
+    '''
+    #approach: by using the series 1-x^2/2!+x^4/4!-x^6/6!.....
+    epsilon=0.0001
+    term = 1
+    mulBy = -x*x
+    total = 1
+    nextTerm = 1
+    while( abs(term)>epsilon):
+        divBy=(nextTerm)*(nextTerm+1)
+        term*= mulBy/divBy
+        total =total + term
+        nextTerm = nextTerm + 2
+    return total
+        
+    
+    
+def main():
+    '''
+    objective: to compute value of cos x
+    input parameters:
+        x: for which value is to be computed
+    '''
+    #approach: make use of function cos(x)
+    theta= int(input("enter the value of theta:"))
+    angle=(theta*3.14)/180
+    print("the value of cosine",theta," is", cos(angle))
+    print("End of function")
+    
+if __name__ == '__main__':
+    main()
+print("End of Program")
