@@ -1,0 +1,15 @@
+if __name__ == '__main__':
+    n = int(input())
+    #print(n)
+    arr = tuple(map(int, input().split()))
+    fst_max = -100
+    for j in arr:
+        if(j > fst_max):
+            fst_max = j
+    print(len(arr))
+    sec_max = -100
+    for k in arr:
+        if((k > sec_max)&(k != fst_max)):
+            sec_max = k
+    print("The second largest number in the given list is : ")
+    print(sec_max)
