@@ -1,0 +1,38 @@
+def sine(x):
+    '''
+    objective: to find the value of sine of a given number.
+    input parameters:
+                     x the value for which sine is to be calculated
+    return value: the value of sine of x
+    '''
+    #approach: by using the series x-x^3/3!+x^5/5!-x^7/7!.....
+    epsilon=0.0001
+    term = x
+    mulBy = -x*x
+    total = x
+    nextTerm = 2
+    while( abs(term)>epsilon):
+        divBy=(nextTerm)*(nextTerm+1)
+        term*= mulBy/divBy
+        total =total + term
+        nextTerm = nextTerm + 2
+    return total
+        
+    
+    
+def main():
+    '''
+    objective: to compute value of sine x
+    input parameters:
+        x: for which value is to be computed
+    
+    '''
+    #approach: make use of function sine(x)
+    theta= int(input("enter the value of theta:"))
+    angle=(theta*3.14)/180
+    print("the value of sine",theta," is", sine(angle))
+    print("End of function")
+    
+if __name__ == '__main__':
+    main()
+print("End of Program")
