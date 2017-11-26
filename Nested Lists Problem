@@ -1,0 +1,28 @@
+def secmin(score):
+    fst_min = 100.000
+    for scr in score:
+        if(scr < fst_min):
+            fst_min = scr
+    sec_min = 100.000
+    for scr in score:
+        if((scr < sec_min)&(scr != fst_min)):
+            sec_min = scr
+    return(sec_min)
+if __name__ == '__main__':
+    i=1
+    name=[]
+    score=[]
+    student = []
+    for i in range(int(input())):
+        name.append(str(input()))
+        score.append(float(input()))
+        student.append([name[i],score[i]])
+    sec = secmin(score)
+    result = []
+    for ele in student:
+        if (ele[1] == sec):
+            x = student.index(ele)
+            result.append(student[x][0])
+    final_result = sorted(result)
+    for names in final_result:
+        print(names)
