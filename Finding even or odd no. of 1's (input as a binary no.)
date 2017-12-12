@@ -1,0 +1,14 @@
+s = input()
+i = 0
+for ele in s:
+    if ele == '1' or ele == '0':
+        i += 1
+        if i == len(s):
+            cnt = s.count('1')
+            if cnt%2 == 0:
+                print('evil')
+            if cnt%2 == 1:
+                print('not evil')
+    else :
+        print('please enter a binary input')
+        break
